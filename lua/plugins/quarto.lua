@@ -398,8 +398,13 @@ return {
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
       local lspkind = require "lspkind"
-      lspkind.init()
+      lspkind.init({
+        symbol_map = {
+          Copilot = "",
+        },
+      })
 
+      vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 
       local has_words_before = function()
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -473,6 +478,7 @@ return {
         },
         sources = {
           -- { name = 'copilot',                keyword_length = 0, max_item_count = 3 },
+          { name = 'copilot' },
           { name = 'otter' }, -- for code chunks in quarto
           { name = 'path' },
           { name = 'nvim_lsp' },
@@ -492,6 +498,12 @@ return {
         window = {
           documentation = {
             border = require 'misc.style'.border,
+          },
+        },
+        sorting = {
+          priority_weight = 2,
+          comparators = {
+            require("copilot_cmp.comparators").prioritize,
           },
         },
       })
