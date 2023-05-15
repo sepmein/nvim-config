@@ -52,4 +52,26 @@ return {
       )
     end
   },
+  {
+    'mrjones2014/legendary.nvim',
+    -- sqlite is only needed if you want to use frecency sorting
+    -- dependencies = { 'kkharji/sqlite.lua' },
+    config = function()
+      require('legendary').setup({
+        extensions = {
+          smart_splits = {
+            directions = { 'h', 'j', 'k', 'l' },
+            mods = {
+              -- for moving cursor between windows
+              move = '<C>',
+              -- for resizing windows
+              resize = '<M>',
+              -- for swapping window buffers
+              swap = false, -- false disables creating a binding
+            },
+          },
+        }
+      })
+    end
+  }
 }
