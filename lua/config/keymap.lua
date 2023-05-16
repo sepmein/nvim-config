@@ -31,10 +31,10 @@ imap("<C-s>", "<cmd>:w<cr><esc>")
 nmap("<C-s>", "<cmd>:w<cr><esc>")
 
 -- Move between windows using <ctrl> direction
-nmap('<C-j>', '<C-W>j')
-nmap('<C-k>', '<C-W>k')
-nmap('<C-h>', '<C-W>h')
-nmap('<C-l>', '<C-W>l')
+-- nmap('<C-j>', '<C-W>j')
+-- nmap('<C-k>', '<C-W>k')
+-- nmap('<C-h>', '<C-W>h')
+-- nmap('<C-l>', '<C-W>l')
 
 -- Resize window using <shift> arrow keys
 nmap("<S-Up>", "<cmd>resize +2<CR>")
@@ -86,10 +86,10 @@ nmap('<c-d>', '<c-d>zz')
 nmap('<c-u>', '<c-u>zz')
 
 -- move between splits and tabs
-nmap('<c-h>', '<c-w>h')
-nmap('<c-l>', '<c-w>l')
-nmap('<c-j>', '<c-w>j')
-nmap('<c-k>', '<c-w>k')
+-- nmap('<c-h>', '<c-w>h')
+-- nmap('<c-l>', '<c-w>l')
+-- nmap('<c-j>', '<c-w>j')
+-- nmap('<c-k>', '<c-w>k')
 nmap('H', '<cmd>tabprevious<cr>')
 nmap('L', '<cmd>tabnext<cr>')
 
